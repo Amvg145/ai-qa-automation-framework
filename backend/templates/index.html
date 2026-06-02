@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            "AI suportted Chatbot"
+        </title>
+    </head>
+    <body>
+        <h1>AI Customer Support</h1>
+        <input id="message-input" placeholder="Type message">
+        <button id="send-btn">Send</button>
+        <p id="response"></p>
+        <script>
+            document
+            .getElementById("send-btn")
+            .onclick = async function () {
+            
+
+            const message = 
+            document.getElementById("message-input").value;
+
+            const response = await fetch("/chat", {
+                method: "POST"
+            });
+
+            const data = await response.json();
+
+            document
+            .getElementById("response").innerText = data.response;
+        };
+        </script>
+    </body>
+</html>
+
+
+</html>

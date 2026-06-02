@@ -1,0 +1,2 @@
+[32mINFO    [0m api_framework:api_client.py:11 POST request to /chat
+[32mINFO    [0m api_framework:api_client.py:17 Response code: 200

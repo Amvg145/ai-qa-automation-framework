@@ -37,6 +37,12 @@ pipeline{
 
         always {
 
+            allure(
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'reports']]
+            )
+
             archiveArtifacts(
                 artifacts: 'reports/*',
                 fingerprint: true

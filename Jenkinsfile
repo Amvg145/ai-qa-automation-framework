@@ -18,7 +18,7 @@ pipeline{
         }
         stage('Run API Tests'){
             steps{
-                bat 'pytest api_test -v'
+                bat 'pytest api_tests -v'
             }
         }
         stage('Run UI Tests') {

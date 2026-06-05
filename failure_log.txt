@@ -1,0 +1,31 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.2, pytest-8.2.1, pluggy-1.5.0 -- C:\Users\HP\AppData\Local\Programs\Python\Python312\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.2', 'Platform': 'Windows-11-10.0.26200-SP0', 'Packages': {'pytest': '8.2.1', 'pluggy': '1.5.0'}, 'Plugins': {'allure-pytest': '2.16.0', 'anyio': '4.13.0', 'base-url': '2.1.0', 'html': '4.1.1', 'metadata': '3.1.1', 'playwright': '0.8.0'}, 'JAVA_HOME': 'C:\\Program Files\\Java\\jdk-21', 'Base URL': ''}
+rootdir: C:\ai-qa-automation-framework
+configfile: pytest.ini
+plugins: allure-pytest-2.16.0, anyio-4.13.0, base-url-2.1.0, html-4.1.1, metadata-3.1.1, playwright-0.8.0
+collecting ... collected 4 items
+
+generated_tests/test_ai_generated.py::test_positive_case PASSED          [ 25%]
+generated_tests/test_ai_generated.py::test_negative_case PASSED          [ 50%]
+generated_tests/test_ai_generated.py::test_edge_case PASSED              [ 75%]
+generated_tests/test_failure_demo.py::test_refund_response FAILED        [100%]
+
+================================== FAILURES ===================================
+____________________________ test_refund_response _____________________________
+
+    def test_refund_response():
+    
+        expected = "refund processed"
+        actual = ""
+    
+>       assert expected == actual
+E       AssertionError: assert 'refund processed' == ''
+E         
+E         + refund processed
+
+generated_tests\test_failure_demo.py:6: AssertionError
+=========================== short test summary info ===========================
+FAILED generated_tests/test_failure_demo.py::test_refund_response - Assertion...
+========================= 1 failed, 3 passed in 0.30s =========================
